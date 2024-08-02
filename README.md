@@ -4,10 +4,12 @@
 
 1. Clone the repository
 2. Run `composer install`
-3. Set up `.env` file with your database credentials
-4. Run `php artisan migrate` to set up the database
-5. Run `php artisan queue:work` to start the queue worker
-6. Run `php artisan serve` to start the application
+3. Setup your local database
+4. Set up `.env` file with your database credentials
+5. Run `php artisan migrate` to set up the database
+6. Run `php artisan queue:work` to start the queue worker
+7. Run `php artisan serve` to start the application
+8. Run `php artisan test` to run the tests
 
 ## API Endpoints
 
