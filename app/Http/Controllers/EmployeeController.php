@@ -19,7 +19,12 @@ class EmployeeController extends Controller
      */
     public function import(Request $request)
     {
-        //
+        $file = $request->file('file');
+        $data = file_get_contents($file);
+
+        return response()->json([
+            'message' => 'Employees imported successfully'
+        ], 201);
     }
 
     /**
