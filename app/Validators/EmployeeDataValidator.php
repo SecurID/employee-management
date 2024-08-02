@@ -9,7 +9,7 @@ class EmployeeDataValidator
     public static function validate(array $data)
     {
         $rules = [
-            'Emp ID' => 'integer|unique:employees',
+            'Emp ID' => 'integer',
             'User Name' => 'string|max:255',
             'Name Prefix' => 'string|max:10',
             'First Name' => 'string|max:255',
