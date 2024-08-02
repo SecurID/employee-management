@@ -22,7 +22,7 @@ class EmployeeTest extends TestCase
     public function testShowSingleEmployee()
     {
         $employee = Employee::factory()->create();
-        $response = $this->get('/api/employee/' . $employee->id);
+        $response = $this->get('/api/employee/' . $employee->employee_id);
 
         $response->assertStatus(200);
         $response->assertJson($employee->toArray());
@@ -31,7 +31,7 @@ class EmployeeTest extends TestCase
     public function testDeleteEmployee()
     {
         $employee = Employee::factory()->create();
-        $response = $this->delete('/api/employee/' . $employee->id);
+        $response = $this->delete('/api/employee/' . $employee->employee_id);
 
         $response->assertStatus(204);
         $this->assertDatabaseMissing('employees', $employee->toArray());

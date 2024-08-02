@@ -13,7 +13,7 @@ class EmployeeFactory extends Factory
     public function definition(): array
     {
         return [
-            'employee_id' => $this->faker->unique()->word(),
+            'employee_id' => $this->faker->unique()->randomNumber(6),
             'user_name' => $this->faker->userName(),
             'name_prefix' => $this->faker->name(),
             'first_name' => $this->faker->firstName(),
